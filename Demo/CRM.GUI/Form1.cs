@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,18 @@ namespace CRM.GUI
             //Constructor .ctor
             //Metoden nedanför skapar UI som vi drag and droppat
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            //Här hamnar vi när användaren klickar på knappen
+            //Läs av det som står i textboxarna
+            //Skapa en ny kund
+            //Spara kunden  
+
+            
+            ArrayList Customers = new ArrayList();
+            Customers.Add(new Customer() { FirstName = textBox1.Text, LastName = textBox2.Text });
         }
     }
 }

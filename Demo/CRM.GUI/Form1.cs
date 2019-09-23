@@ -14,6 +14,8 @@ namespace CRM.GUI
     {
         public Form1()
         {
+            //Constructor .ctor
+            //Metoden nedanför skapar UI som vi drag and droppat
             InitializeComponent();
         }
     }

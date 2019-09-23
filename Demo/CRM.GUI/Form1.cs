@@ -13,11 +13,19 @@ namespace CRM.GUI
 {
     public partial class Form1 : Form
     {
+        ArrayList Customers = new ArrayList();
+
         public Form1()
         {
             //Constructor .ctor
             //Metoden nedanför skapar UI som vi drag and droppat
             InitializeComponent();
+
+            //Nu har vi fått vårt GUI på plats
+            //Dvs vi kan nu prata med objekten
+
+            button1.Text = "Add Customer";
+            button2.Text = "Show Customers";
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -27,9 +35,18 @@ namespace CRM.GUI
             //Skapa en ny kund
             //Spara kunden  
 
-            
-            ArrayList Customers = new ArrayList();
             Customers.Add(new Customer() { FirstName = textBox1.Text, LastName = textBox2.Text });
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //Skriv ut alla kunder i listboxen
+            listBox1.Items.Clear();
+
+            foreach (Customer c in Customers)
+            {
+                listBox1.Items.Add(c.FirstName);
+            }
         }
     }
 }
